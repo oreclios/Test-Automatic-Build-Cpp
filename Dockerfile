@@ -4,6 +4,5 @@ FROM gcc:4.9
 MAINTAINER Manuel Velasco
 
 COPY . /usr
-WORKDIR /usr/src
-RUN g++ -o myapp Test_project1.cpp
-CMD ["./myapp"]
+WORKDIR /usr
+RUN make
