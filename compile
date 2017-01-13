@@ -1,0 +1,1 @@
+g++ -o myapp Test_project1.cpp

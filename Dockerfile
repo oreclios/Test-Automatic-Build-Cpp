@@ -5,4 +5,5 @@ MAINTAINER Manuel Velasco
 
 COPY . /usr
 WORKDIR /usr
-RUN make
+RUN sh compile
+CMD ["./myapp"]
