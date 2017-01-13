@@ -3,7 +3,7 @@
 FROM gcc:4.9
 MAINTAINER Manuel Velasco
 
-COPY . /usr/src/myapp
-WORKDIR /usr/src/myapp
-RUN gcc -o myapp main.c
+COPY . /usr
+WORKDIR /usr/src
+RUN g++ -o myapp Test_project1.cpp
 CMD ["./myapp"]
