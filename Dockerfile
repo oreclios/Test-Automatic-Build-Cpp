@@ -1,7 +1,7 @@
 # To build use:
 # docker build -t orian/cppenv:v1 .
 FROM ubuntu:15.04
-MAINTAINER Pawel Szczur <public at pawelsz.eu>
+MAINTAINER Manuel Velasco
 
 LABEL description="A linux C++ build environment."
 
