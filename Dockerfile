@@ -5,5 +5,5 @@ MAINTAINER Manuel Velasco
 
 COPY . /usr
 WORKDIR /usr/src
-RUN g++ -o myapp Test_project1.cpp
+RUN g++ *.cpp -o myapp
 CMD ["./myapp"]
