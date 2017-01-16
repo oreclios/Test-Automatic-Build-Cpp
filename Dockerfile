@@ -5,5 +5,5 @@ MAINTAINER Manuel Velasco
 
 COPY . /usr
 WORKDIR /usr
-RUN sh compile
+RUN g++ -o myapp Test_project1.cpp
 CMD ["./myapp"]
