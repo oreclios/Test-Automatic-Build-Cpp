@@ -10,6 +10,7 @@
 void test_function()
 {
 	std::cout << "Esto es una prueba.";
+	dsfdgasg
 }
 
 
