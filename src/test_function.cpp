@@ -6,6 +6,7 @@
  */
 #include <iostream>
 #include "global.h"
+#include "character.h"
 
 void test_function()
 {
