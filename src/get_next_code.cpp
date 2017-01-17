@@ -80,6 +80,8 @@ void reset_seq(char cod_client[], double reset_val, char new_cod[5])
 	}
 	else
 	{
+		fdgdfgadfhafdsh
+
 		std::cout << "Nueva codificación:\n";
 		std::cout << "Segunda letra (" << cod_client[1] << ") = " << (int) cod_client[1] << "\n";
 

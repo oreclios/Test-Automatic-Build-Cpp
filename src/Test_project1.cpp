@@ -12,7 +12,6 @@
 #include <sstream>
 
 #include "global.h"
-using namespace std;
 
 int main() {
 
