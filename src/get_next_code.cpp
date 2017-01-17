@@ -71,18 +71,12 @@ void reset_seq(char cod_client[], double reset_val, char new_cod[5])
 {
 	int ascii_code;
 
-	std::cout << "Hay que resetear la secuencia:\n";
-
 	if(reset_val == -99999)
 	{
-		std::cout << "Antigua codificación:";
 		strcpy(new_cod, "AA000");
 	}
 	else
 	{
-		std::cout << "Nueva codificación:\n";
-		std::cout << "Segunda letra (" << cod_client[1] << ") = " << (int) cod_client[1] << "\n";
-
 		ascii_code = (int) cod_client[1];
 		if(ascii_code + 1 <= 90)
 		{
@@ -93,7 +87,6 @@ void reset_seq(char cod_client[], double reset_val, char new_cod[5])
 		}
 		else
 		{
-			std::cout << "Se pasa a siguiente letra para primer digito:\n";
 			ascii_code = (int) cod_client[0];
 			if(ascii_code < 90)
 			{
@@ -104,7 +97,6 @@ void reset_seq(char cod_client[], double reset_val, char new_cod[5])
 			}
 			else
 			{
-				std::cout << "Se ha alcanzado el límite máximo de clientes.\n";
 				strcpy(new_cod, "LIMITE ALCANZADO");
 			}
 		}

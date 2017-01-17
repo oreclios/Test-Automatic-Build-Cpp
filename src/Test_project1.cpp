@@ -53,5 +53,7 @@ int main() {
 	get_next_code(cod_cliente, new_code);
 	std::cout << "Nuevo código = " << new_code << "\n\n";
 
+	get_next_day();
+
 	return 0;
 }
