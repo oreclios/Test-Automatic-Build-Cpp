@@ -1,5 +1,5 @@
 /*
- * get_next_day.cpp
+ * Client.cpp
  *
  *  Created on: 17 ene. 2017
  *      Author: mvelascoj
@@ -10,9 +10,14 @@
 #include <sstream>
 #include <ctime>
 
+#include "Client.h"
 #include "global.h"
 
-void get_next_day(time_t *now, time_t *tomorrow)
-{
-	*tomorrow = *now + 86400;
+Client::Client() {
+	// TODO Auto-generated constructor stub
 }
+
+Client::~Client() {
+	// TODO Auto-generated destructor stub
+}
+
