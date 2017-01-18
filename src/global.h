@@ -11,5 +11,4 @@ void prueba1();
 
 void get_next_code(std::string cod_cliente, std::string & new_code);
 void reset_seq(std::string cod_client, double reset_val, std::string & new_cod);
-void get_next_day(time_t *now, time_t *tomorrow);
 void create_new_client(std::list<Client> & ClientList, Client & client, std::string name, int index);
