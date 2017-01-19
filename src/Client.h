@@ -15,7 +15,7 @@ public:
 
 	std::string Name;
 	std::string Code;
-	time_t date_contr;
+	long int date_contr;
 	int index;
 };
 
