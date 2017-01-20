@@ -12,12 +12,6 @@
 
 #include "global.h"
 
-static int callback_last_code(void *VeryUsed, int argc, char **argv, char **azColName){
-	std::string * last_code = (std::string *)VeryUsed;
-	*last_code = argv[0];
-	return 0;
-}
-
 void create_new_client(std::list<Client> & ClientList, Client & client, std::string name, int index, int count, sqlite3 * db)
 {
 	std::string new_code;
@@ -29,6 +23,8 @@ void create_new_client(std::list<Client> & ClientList, Client & client, std::str
 	int rc;
 
 	client.Name = name;
+	client.Surname1 = "De tal";
+	client.Surname2 = "De cual";
 	client.index = index;
 	if(index == 0)
 	{
@@ -41,7 +37,7 @@ void create_new_client(std::list<Client> & ClientList, Client & client, std::str
 	else if(index != 0 && count == 0)
 	{
 		/*Obtener ultimo codigo de BBDD:*/
-		sprintf(sql_str, "SELECT CODE FROM CLIENTS WHERE ID = %d;",index-1);
+		sprintf(sql_str, "SELECT CODE FROM CLIENTS_DETAILED WHERE ID = %d;",index-1);
 		sql = sql_str;
 		rc = sqlite3_exec(db, sql, callback_last_code, &last_code, &zErrMsg);
 		if( rc != SQLITE_OK ){
@@ -52,8 +48,7 @@ void create_new_client(std::list<Client> & ClientList, Client & client, std::str
 		}
 
 	}
-	get_next_code(last_code, new_code);
-	client.Code = new_code;
+	get_next_code(last_code, client.Code);
 	client.date_contr = (long int)time(0);
 }
 

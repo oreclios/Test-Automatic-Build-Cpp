@@ -14,7 +14,10 @@ public:
 	virtual ~Client();
 
 	std::string Name;
+	std::string Surname1;
+	std::string Surname2;
 	std::string Code;
+	int product;
 	long int date_contr;
 	int index;
 };
